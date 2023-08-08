@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Personal</title>
+    <link rel="stylesheet" href="./meStyle.css">
+    <script src="./script.js">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Navbar Header  -->
+    <div class="topnav" id="myTopnav">
+      <img src="./images/codigo.resized.png" alt="imgProgamacion"/>
+      <a href="#guidoG" >Maximiliano Bagnasco </a>
+      <a href="#maxiB" >Guido Gagliardini</a>
+      <a class="icon" onclick="navBarOpen()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <!-- Reloj -->
+    <div class="container-clock">
+      <div id="clock"></div>
+    </div>
+
+    <!-- Titulo Principal -->
+    <div class="title">
+      <h2>Blog informativo </h2>
+      <p style="color: black;">Desarollo Web - IFTS 16</p>
+    </div>
+    <!-- Body -->
+    <div class="info">
+      Este es un blog de <strong>prueba</strong> donde los alumnos Guido Gagliardini  y Maximiliano Bagnasco, estaran desarollando un blog con <strong>diferentes funcionalidades</strong>.
+      <div>
+        Los frameworks utilizados para este trabajo son : 
+        <ul>
+          <li>
+            HTML
+          </li>
+          <li>
+            CSS
+          </li>
+          <li>
+            JavaScript
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Imagenes Integrantes -->
+    <div class="container-images-effects">
+      <h2>Imagenes de los integrantes</h2>
+      <div id="overlay" class="image-overlay"></div>
+      <img id="myImage" src="./images/maxi.jpeg" onmouseenter="restoreImage('./images/CV2.jpg')" onmouseout="changeImage('./images/maxi.jpeg')" alt="image">
+    </div>
+
+
+    <!-- Redes Sociales  -->
+    <div class="container-buttons">
+      <button class="button-social-media" onclick="redirectToLinkedin('guido')">Linkedin Guido Gagliardini</button>
+      <button class="button-social-media" onclick="redirectToLinkedin('maxi')">Linkedin Maximiliano Bagnasco</button>
+    </div>
+
+    
+    <!-- Calculadora -->
+    <div class="container-calculator" onclick="openCalculator()">
+      <button id="toggleButton">Abrir Calculadora</button>
+    </div>
+
+    <div id="box" class="hidden">
+      <div class="calculator">
+        <input type="number" id="num1" placeholder="Ingrese Numero 1">
+        <select id="operator">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+        <input type="number" id="num2" placeholder="Ingrese Numero  2">
+        <div class="buttons-and-result">
+          <button class="button-calculator" onclick="calculate()">Realizar</button>
+          <button class="button-clear" onclick="clearCalculator()">Limpiar</button>
+          <input type="text" id="result" readonly>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+      <footer>
+        <p>&copy; 2023 Guido Gagliardini - Maximiliano Bagnasco </p>
+      </footer>
+  </div>
+</body>
+</html>
